@@ -1,6 +1,7 @@
 ---
 title: Test
-description: 某高校阿兹海默患者发声：なんで隠れての？
+description: 某高校阿兹海默患者发声
+slug: why-you-dont-render
 date: 2023-03-29T12:41:12Z
 image: 
 comments: true

@@ -1,14 +1,60 @@
 ---
 title: "Worker.js"
+description: 冰岩分享：2分钟精通 Worker.js
 slug: workerjs
 date: 2023-03-30T10:28:18+08:00
 comments: true
 categories: development
+tags: 
+  - JavaScript
 ---
 
 Web Workers 可以让代码独立于主线程运行，避免大量的运算阻塞浏览器渲染画面，并且可以在计算过程中交互。  
+其实它的功能和API非常简单，就是多线程工具。  
 
 ## 如何使用
+
+### 网页端
+
+1. 创建 Worker
+
+```js
+let worker = Worker("/path/to/worker.js")
+```
+
+2. 接收来自 Worker 的信息
+
+```js
+worker.onmessage = event => {
+  console.log(event.data)
+}
+```
+
+3. 向 Worker 发送信息
+
+```js
+worker.postMessage("Hello!")
+```
+
+### worker.js
+
+1. 接受信息
+
+```js
+onmessage = event => {
+  if (event.data == "Hello!") {
+    //Do something...
+  }
+}
+```
+
+2. 发送信息给网页
+
+```js
+postMessage("How are you?")
+```
+
+### 结合起来...
 
 ```js
 // <script>
@@ -28,12 +74,84 @@ onmessage = event => {
 }
 ```
 
+## 一个例子
+
+[算法大作业](https://chen03.github.io/Fifty-five-game/)
+
+### calc.worker.js
+
+```js
+function calculate() {
+  console.log('calculate');
+  while (queue.size !== 0 && !equal(dest, queue.peek().stat)) {
+    //算法过程...
+    if (lim % 23 === 0) {
+      postMessage({type: 'stat', stat: now.stat, step: lim}); //发送计算过程到网页
+    }
+  }
+
+  //计算结束
+  hasStopped = true;
+  postMessage({type: 'stop', dist: queue.peek().step, time: ((new Date).getTime())});
+  postMessage({type: 'stat', stat: dest, step: lim});
+}
+
+// 以下为与网页交互内容
+onmessage = (ev) => {
+  switch (ev.data.type) {
+    case 'start':
+      //开始算法过程
+      break;
+  }
+}
+```
+
+### 网页端
+
+```js
+function App() {
+  ...
+
+  const [worker, setWorker] = useState(null);
+  useEffect(() => {
+    if (!worker) {
+      var worker = new Worker(new URL('./calc.worker.js', import.meta.url));  //新建 Worker
+      worker.onmessage = (ev) => {
+        switch(ev.data.type) {
+          case 'stat':
+            startTransition(
+              () => {
+                setBoard(ev.data.stat);
+                setStep(ev.data.step);
+              });
+            break;
+          case 'stop':
+            setStopped(true);
+            setDist(ev.data.dist);
+            break;
+        }
+      }
+      setWorker(worker);
+    }
+  }, []);
+
+  return ( ... );
+}
+```
+
 ## 可以做到什么？
 
 - 执行大型计算时，可以避免阻塞主线程  
 - 好像没有了……  
 
 但是真的在有用的时候很有用……  
+
+## TIPS
+
+如果你在使用 Webpack, 要这样[创建 Worker](https://webpack.js.org/guides/web-workers/):
+```js
+new Worker(new URL('./worker.js', import.meta.url));
+```
 
 ## 关于 Service Worker
 

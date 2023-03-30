@@ -7,6 +7,7 @@ menu:
             icon: question
 
 comments: false
+license: No license
 ---
 
 About? About what?

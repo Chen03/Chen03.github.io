@@ -67,15 +67,15 @@ toggle = true
 default = "auto"
 
 [imageProcessing.cover]
-enabled = true
+enabled = false
 
 [imageProcessing.content]
 enabled = true
 
 ## Comments
 [comments]
-enabled = true
-provider = "disqus"
+enabled = false
+# provider = "disqus"
 
 [comments.disqusjs]
 shortname = ""

@@ -1,10 +1,9 @@
 ---
 title: "Worker.js"
 description: 冰岩分享：2分钟精通 Worker.js
-slug: workerjs
 date: 2023-03-30T10:28:18+08:00
-comments: true
-categories: development
+image: cover.JPG
+categories: dev
 tags: 
   - JavaScript
 ---
@@ -148,7 +147,7 @@ function App() {
 
 ## TIPS
 
-如果你在使用 Webpack, 要这样[创建 Worker](https://webpack.js.org/guides/web-workers/):
+如果你在使用 [Webpack](https://webpack.js.org/guides/web-workers/) 或者 [Vite](https://vitejs.dev/guide/features.html#web-workers), 要这样创建 Worker:
 ```js
 new Worker(new URL('./worker.js', import.meta.url));
 ```

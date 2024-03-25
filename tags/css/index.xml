@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSS on Blanc's space</title><link>https://chen03.github.io/tags/css/</link><description>Recent content in CSS on Blanc's space</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 30 Mar 2023 20:19:07 +0800</lastBuildDate><atom:link href="https://chen03.github.io/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS世界读书笔记</title><link>https://chen03.github.io/p/css%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 30 Mar 2023 20:19:07 +0800</pubDate><guid>https://chen03.github.io/p/css%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="width--height">Width &amp;amp; Height&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>width: auto&lt;/code> 有四种表现：
+&lt;ul>
+&lt;li>&lt;code>fill-avaliable&lt;/code>: block(&lt;code>&amp;lt;div&amp;gt; &amp;lt;p&amp;gt;&lt;/code>)&lt;/li>
+&lt;li>&lt;code>fit-content&lt;/code>: inline(&lt;code>&amp;lt;span&amp;gt; &amp;lt;a&amp;gt;&lt;/code>)&lt;/li>
+&lt;li>&lt;code>min-content&lt;/code>&lt;/li>
+&lt;li>&lt;code>max-content&lt;/code>: CSS3新特性，不换行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>height: auto&lt;/code> 基本只有 &lt;code>fit-content&lt;/code> 表现&lt;/li>
+&lt;li>父元素为 &lt;code>inline&lt;/code>，子元素为 &lt;code>block&lt;/code>（互相依赖时）&lt;/li>
+&lt;/ul>
+&lt;p>看的时候：&lt;br>
+（看到前言）作者绝对是EXFJ吧！&lt;br>
+（当季新番《CSS王国》）……ENFP？&lt;br>
+（不太好的笑话（？））……ESFJ？&lt;br>
+（盒子性别论）……ESFJ。//好吧其实也没对应……嗯……可能吧大概吧这只是本技术书籍放过自己吧&lt;br>
+（其实有第三性别）……哈？ENFJ？&lt;/p></description></item></channel></rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Swift on Blanc's space</title><link>https://chen03.github.io/tags/swift/</link><description>Recent content in Swift on Blanc's space</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 01 Apr 2023 15:42:32 +0800</lastBuildDate><atom:link href="https://chen03.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift 开发随笔2</title><link>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%942/</link><pubDate>Sat, 01 Apr 2023 15:42:32 +0800</pubDate><guid>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%942/</guid><description>&lt;p>终于做完字段转换了……解决方案就是，传一个 converter 进 AddNote 的 View 里，感觉有点像 delegate 的想法呢&lt;br>
+&lt;del>（要变成 Apple 的形状了，乌乌）&lt;/del>&lt;br>
+到这里，这个 App 终于开始实用起来了&lt;/p>
+&lt;p>然后就是为了解决 Published 和 Codable 不能共存的问题，在 StackOverflow 上找到了&lt;a class="link" href="https://stackoverflow.com/a/71464346" target="_blank" rel="noopener"
+>惊为天人的代码&lt;/a>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-swift" data-lang="swift">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Published+Value.swift&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">PublishedWrapper&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">@&lt;/span>&lt;span class="n">Published&lt;/span> &lt;span class="kd">private&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">set&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nv">value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">T&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">_&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Published&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_value&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nv">unofficialValue&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Value&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PublishedWrapper&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">self&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Published+Codable.swift&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decodable&lt;/span> &lt;span class="k">where&lt;/span> &lt;span class="n">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decodable&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span> &lt;span class="n">decoder&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decoder&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kr">throws&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kc">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wrappedValue&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">try&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">decoder&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encodable&lt;/span> &lt;span class="k">where&lt;/span> &lt;span class="n">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encodable&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">func&lt;/span> &lt;span class="nf">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to&lt;/span> &lt;span class="n">encoder&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encoder&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kr">throws&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span> &lt;span class="n">unofficialValue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">encoder&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>好厉害……感觉自己只会用东西，别人真的在造东西……&lt;/p>
+&lt;p>好困……有人为了测试 App（嗯）&lt;del>看小说&lt;/del>看到了 7点半&lt;br>
+（确实要比系统词典好用，但是没有句子翻译很麻烦……）&lt;br>
+但是 knmf 真的很好磕！&lt;/p></description></item><item><title>Swift 开发随笔1</title><link>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%941/</link><pubDate>Wed, 29 Mar 2023 22:46:55 +0800</pubDate><guid>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%941/</guid><description>&lt;p>关于不同的翻译到底要怎么把单词数据转换成对应的Anki field的问题——&lt;br>
+（涉及到：字典类型、单词显示View、转换函数如何组织）&lt;br>
+&lt;del>最终决定还是：把 &lt;code>SearchResult&lt;/code> 抽象出来，然后在各自的 &lt;code>SearchResult&lt;/code> 中糅合&lt;/del>&lt;/p>
+&lt;p>&lt;del>并不行……Swift不支持泛型数组……&lt;/del>&lt;br>
+&lt;del>可恶你不是现代语言吗怎么这点东西都不支持……&lt;/del>&lt;/p>
+&lt;p>它支持的！！但是，&lt;code>any SearchResult cannot conform to Protocol Identifiable&lt;/code>&lt;br>
+解决方法：只要在 View 里尽量不用涉及要遵循接口的 View 就可以了……&lt;/p>
+&lt;p>And protocol 里的 View 要写成 any View，因为 View 本身也是接口&lt;br>
+解决方法：使用 &lt;code>AnyView&lt;/code>，是一个 Structure（怎么又来一个新东西&lt;br>
+（PS 既然 Swift 你都有这样的工具 struct 了，官方拓展一下 Published+Codable 又会怎么样呢……&lt;/p></description></item></channel></rss>

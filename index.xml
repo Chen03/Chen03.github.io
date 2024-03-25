@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blanc's space</title><link>https://chen03.github.io/</link><description>Recent content on Blanc's space</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Apr 2023 20:19:49 +0800</lastBuildDate><atom:link href="https://chen03.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>StaticeApp</title><link>https://chen03.github.io/p/staticeapp/</link><pubDate>Sun, 09 Apr 2023 20:19:49 +0800</pubDate><guid>https://chen03.github.io/p/staticeapp/</guid><description>&lt;img src="https://chen03.github.io/p/staticeapp/cover.jpeg" alt="Featured image of post StaticeApp" />&lt;style>
+section img {
+width: 300px;
+}
+&lt;/style>
+&lt;p>开发的初衷是在安卓上有类似的软件，但是iOS上却没有，于是自己写了一个。&lt;br>
+以及，还有iOS自带的翻译过于不准确，和词典缺少不常见的词（尤其是流行语）的原因。&lt;br>
+至少自己用起来是很好用的！&lt;/p>
+&lt;h2 id="功能">功能&lt;/h2>
+&lt;ul>
+&lt;li>搜索单词&lt;/li>
+&lt;li>翻译句子&lt;/li>
+&lt;li>一键添加到Anki note&lt;/li>
+&lt;/ul>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;p>本应用要求 iOS16 及以上的系统。&lt;/p>
+&lt;h3 id="testflight">Testflight&lt;/h3>
+&lt;p>如果你不懂得 Sideload 或者使用 Altstore，请参加应用的 Testflight 来安装应用。&lt;/p>
+&lt;p>&lt;a class="link" href="https://testflight.apple.com/join/rOd5PlDt" target="_blank" rel="noopener"
+>参加 Testflight&lt;/a>&lt;/p>
+&lt;p>如果你之前没有安装过 Testflight App，请参照页面内的指引安装 Testflight。&lt;/p>
+&lt;h3 id="ipa">IPA&lt;/h3>
+&lt;p>请到 &lt;a class="link" href="https://github.com/Chen03/StaticeApp/releases" target="_blank" rel="noopener"
+>Release&lt;/a> 里下载最新的 ipa。&lt;/p>
+&lt;h2 id="使用">使用&lt;/h2>
+&lt;h3 id="网页浏览">网页浏览&lt;/h3>
+&lt;p>点击地址栏输入网址以浏览网页。&lt;br>
+左下角的红色flag可以把当前页面添加到收藏，书本图标可以打开收藏。&lt;/p>
+&lt;p>&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4566.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4566_hu1f763f7bb13e4c40cf0eea6bb7fae747_497939_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4566_hu1f763f7bb13e4c40cf0eea6bb7fae747_497939_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;h3 id="查询单词与翻译文本">查询单词与翻译文本&lt;/h3>
+&lt;p>选中任意文本时，会弹出 Search 和 Translate，点击 Search 会搜索当前单词，并且翻译上下文句子，方便理解。点击 Translate 会翻译当前句子。翻译使用的是有道翻译。&lt;/p>
+&lt;p>&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4567.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4567_hub7dd222de1ca8d25774eb46434ea52da_1090312_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4567_hub7dd222de1ca8d25774eb46434ea52da_1090312_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>
+&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4568.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4568_hu4c8aabdd36553c0fc09347e0dfabd520_363001_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4568_hu4c8aabdd36553c0fc09347e0dfabd520_363001_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>右下角可以收起地址栏，拓宽空间。&lt;/p>
+&lt;h3 id="阅读模式">阅读模式&lt;/h3>
+&lt;p>有时候网页的广告特别烦人，所以做了阅读模式。&lt;br>
+只要点击地址栏左侧的按钮就可以打开阅读模式。&lt;/p>
+&lt;p>&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4670.jpg"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4670_huf973257bcf871ef13ffb308ffa474937_581469_480x0_resize_q75_box.jpg 480w, https://chen03.github.io/p/staticeapp/IMG_4670_huf973257bcf871ef13ffb308ffa474937_581469_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>
+&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4671.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4671_hu86ea4a20b28573f364bceffbbccf0344_352611_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4671_hu86ea4a20b28573f364bceffbbccf0344_352611_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>目前只适配了 Pixiv，后续大概会推出对 AO3 和 poipiku 的支持。&lt;/p>
+&lt;h3 id="添加到-anki">添加到 Anki&lt;/h3>
+&lt;p>在词语详情页面，长按任意释义或例句，即可把生词添加到 Anki。在添加前，可以对每一个 field 进行调整。&lt;/p>
+&lt;p>&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4570.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4570_hu8e74d8fef214e6d6b7f37d64af6f59f8_838105_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4570_hu8e74d8fef214e6d6b7f37d64af6f59f8_838105_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>
+&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4571.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4571_hua3bd54bb78ead3dee46a50edd82afdda_469501_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4571_hua3bd54bb78ead3dee46a50edd82afdda_469501_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>注意：在使用这一功能前，要先点击齿轮获取 Anki 的信息，并设定单词信息和字段的关系。在编辑界面点击&amp;lt;/&amp;gt;标记，可以插入单词信息。下面是刚才的例子的设置：&lt;/p>
+&lt;p>&lt;img src="https://chen03.github.io/p/staticeapp/IMG_4572.PNG"
+width="1125"
+height="2436"
+srcset="https://chen03.github.io/p/staticeapp/IMG_4572_hu6aab2f2e4f1c15767f865016334a4702_388120_480x0_resize_box_3.PNG 480w, https://chen03.github.io/p/staticeapp/IMG_4572_hu6aab2f2e4f1c15767f865016334a4702_388120_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>程序会把用双中括号括起的内容自动替换成对应的词条内容，填入上一步的 fields 中。&lt;br>
+注意：如果 Anki 中的卡片、牌组等信息更新了，要在本应用的设置中再次同步，否则可能出现问题。&lt;/p>
+&lt;h2 id="后续">后续&lt;/h2>
+&lt;p>大概会继续完善 bug 和修复细节，毕竟已经成了自己晚上睡觉前看同人必不可少的工具了……&lt;br>
+如果真的有除了自己的人用就好了……&lt;br>
+嗯没有也挺好的。&lt;/p></description></item><item><title>Swift 开发随笔2</title><link>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%942/</link><pubDate>Sat, 01 Apr 2023 15:42:32 +0800</pubDate><guid>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%942/</guid><description>&lt;p>终于做完字段转换了……解决方案就是，传一个 converter 进 AddNote 的 View 里，感觉有点像 delegate 的想法呢&lt;br>
+&lt;del>（要变成 Apple 的形状了，乌乌）&lt;/del>&lt;br>
+到这里，这个 App 终于开始实用起来了&lt;/p>
+&lt;p>然后就是为了解决 Published 和 Codable 不能共存的问题，在 StackOverflow 上找到了&lt;a class="link" href="https://stackoverflow.com/a/71464346" target="_blank" rel="noopener"
+>惊为天人的代码&lt;/a>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-swift" data-lang="swift">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Published+Value.swift&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">PublishedWrapper&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">@&lt;/span>&lt;span class="n">Published&lt;/span> &lt;span class="kd">private&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">set&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nv">value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">T&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">_&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Published&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_value&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nv">unofficialValue&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Value&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">PublishedWrapper&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">self&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Published+Codable.swift&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decodable&lt;/span> &lt;span class="k">where&lt;/span> &lt;span class="n">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decodable&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span> &lt;span class="n">decoder&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Decoder&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kr">throws&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kc">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wrappedValue&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">try&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="kd">init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">decoder&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">extension&lt;/span> &lt;span class="nc">Published&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encodable&lt;/span> &lt;span class="k">where&lt;/span> &lt;span class="n">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encodable&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">func&lt;/span> &lt;span class="nf">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to&lt;/span> &lt;span class="n">encoder&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Encoder&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kr">throws&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span> &lt;span class="n">unofficialValue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">to&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">encoder&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>好厉害……感觉自己只会用东西，别人真的在造东西……&lt;/p>
+&lt;p>好困……有人为了测试 App（嗯）&lt;del>看小说&lt;/del>看到了 7点半&lt;br>
+（确实要比系统词典好用，但是没有句子翻译很麻烦……）&lt;br>
+但是 knmf 真的很好磕！&lt;/p></description></item><item><title>CSS世界读书笔记</title><link>https://chen03.github.io/p/css%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 30 Mar 2023 20:19:07 +0800</pubDate><guid>https://chen03.github.io/p/css%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="width--height">Width &amp;amp; Height&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>width: auto&lt;/code> 有四种表现：
+&lt;ul>
+&lt;li>&lt;code>fill-avaliable&lt;/code>: block(&lt;code>&amp;lt;div&amp;gt; &amp;lt;p&amp;gt;&lt;/code>)&lt;/li>
+&lt;li>&lt;code>fit-content&lt;/code>: inline(&lt;code>&amp;lt;span&amp;gt; &amp;lt;a&amp;gt;&lt;/code>)&lt;/li>
+&lt;li>&lt;code>min-content&lt;/code>&lt;/li>
+&lt;li>&lt;code>max-content&lt;/code>: CSS3新特性，不换行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>height: auto&lt;/code> 基本只有 &lt;code>fit-content&lt;/code> 表现&lt;/li>
+&lt;li>父元素为 &lt;code>inline&lt;/code>，子元素为 &lt;code>block&lt;/code>（互相依赖时）&lt;/li>
+&lt;/ul>
+&lt;p>看的时候：&lt;br>
+（看到前言）作者绝对是EXFJ吧！&lt;br>
+（当季新番《CSS王国》）……ENFP？&lt;br>
+（不太好的笑话（？））……ESFJ？&lt;br>
+（盒子性别论）……ESFJ。//好吧其实也没对应……嗯……可能吧大概吧这只是本技术书籍放过自己吧&lt;br>
+（其实有第三性别）……哈？ENFJ？&lt;/p></description></item><item><title>好看的颜色 Collection</title><link>https://chen03.github.io/p/color/</link><pubDate>Thu, 30 Mar 2023 12:37:10 +0800</pubDate><guid>https://chen03.github.io/p/color/</guid><description>&lt;style>
+.color {
+display: inline-block;
+padding: 5px 15px;
+border-radius: 5px;
+background: white;
+color: white;
+}
+&lt;/style>
+&lt;h2 id="ipad-笔色号">iPad 笔色号&lt;/h2>
+&lt;p>&lt;span class="color" style="color: #ff80a4">最後だけ笑って頂戴，いつかいつか報われるから，&lt;/span>&lt;br>
+&lt;span class="color" style="background: #ff80a4;">さざ波の様な 感情二つ，ここに居る理由見つけられるまで。&lt;/span>&lt;/p>
+&lt;p>&lt;span class="color" style="color: #62b7c6">すっからかんに生きたいな何にもないからさ，&lt;/span>&lt;br>
+&lt;span class="color" style="background: #62b7c6;">このまま少しだけ君と踊る時間にハナタバを。&lt;/span>&lt;/p>
+&lt;p>&lt;span class="color" style="color: #cab2e0">いいじゃんか 嗚呼いいじゃんか，&lt;/span>&lt;br>
+&lt;span class="color" style="background: #cab2e0;">上手く言えなくてもいいじゃんか。&lt;/span>&lt;/p>
+&lt;h2 id="span-stylecolor-f7apinkspan">&lt;span style="color: #f7a">Pink&lt;/span>&lt;/h2>
+&lt;p>&lt;span class="color" style="background: #ff6d91">MDN annoucement&lt;/span>&lt;/p></description></item><item><title>Worker.js</title><link>https://chen03.github.io/p/worker.js/</link><pubDate>Thu, 30 Mar 2023 10:28:18 +0800</pubDate><guid>https://chen03.github.io/p/worker.js/</guid><description>&lt;img src="https://chen03.github.io/p/worker.js/cover.JPG" alt="Featured image of post Worker.js" />&lt;p>Web Workers 可以让代码独立于主线程运行，避免大量的运算阻塞浏览器渲染画面，并且可以在计算过程中交互。&lt;br>
+其实它的功能和API非常简单，就是多线程工具。&lt;/p>
+&lt;h2 id="如何使用">如何使用&lt;/h2>
+&lt;h3 id="网页端">网页端&lt;/h3>
+&lt;ol>
+&lt;li>创建 Worker&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">worker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Worker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/path/to/worker.js&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>接收来自 Worker 的信息&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>向 Worker 发送信息&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="workerjs">worker.js&lt;/h3>
+&lt;ol>
+&lt;li>接受信息&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//Do something...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>发送信息给网页&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;How are you?&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="结合起来">结合起来&amp;hellip;&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// &amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">worker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Worker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/path/to/worker.js&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//worker.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;How are you?&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="一个例子">一个例子&lt;/h2>
+&lt;p>&lt;a class="link" href="https://chen03.github.io/Fifty-five-game/" target="_blank" rel="noopener"
+>算法大作业&lt;/a>&lt;/p>
+&lt;h3 id="calcworkerjs">calc.worker.js&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">calculate&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;calculate&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">queue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">size&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dest&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">queue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">peek&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">stat&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//算法过程...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">lim&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">23&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">postMessage&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;stat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stat&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">now&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stat&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">step&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">lim&lt;/span>&lt;span class="p">});&lt;/span> &lt;span class="c1">//发送计算过程到网页
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//计算结束
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">hasStopped&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">postMessage&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;stop&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">dist&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">queue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">peek&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">step&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">())});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">postMessage&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;stat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stat&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">dest&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">step&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">lim&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 以下为与网页交互内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;start&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//开始算法过程
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="网页端-1">网页端&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">App&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">worker&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setWorker&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">useEffect&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">worker&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">worker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Worker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">URL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./calc.worker.js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">//新建 Worker
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">switch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;stat&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">startTransition&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setBoard&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stat&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setStep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">step&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;stop&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setStopped&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setDist&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">dist&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setWorker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">worker&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="p">[]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span> &lt;span class="p">...&lt;/span> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="可以做到什么">可以做到什么？&lt;/h2>
+&lt;ul>
+&lt;li>执行大型计算时，可以避免阻塞主线程&lt;/li>
+&lt;li>好像没有了……&lt;/li>
+&lt;/ul>
+&lt;p>但是真的在有用的时候很有用……&lt;/p>
+&lt;h2 id="tips">TIPS&lt;/h2>
+&lt;p>如果你在使用 &lt;a class="link" href="https://webpack.js.org/guides/web-workers/" target="_blank" rel="noopener"
+>Webpack&lt;/a> 或者 &lt;a class="link" href="https://vitejs.dev/guide/features.html#web-workers" target="_blank" rel="noopener"
+>Vite&lt;/a>, 要这样创建 Worker:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">Worker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">URL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./worker.js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="关于-service-worker">关于 Service Worker&lt;/h2>
+&lt;p>&lt;em>内容来自 MDN&lt;/em>&lt;/p>
+&lt;p>Service Worker 是另一种 Worker，通常用于 Web App 中，可以截获网页的网络请求事件并对请求加以修改，从而实现一些很厉害的功能：&lt;/p>
+&lt;ul>
+&lt;li>实现页面离线加载（使用缓存）&lt;/li>
+&lt;li>集中接收计算成本高的数据更新，比如地理位置和陀螺仪信息，这样多个页面就可以利用同一组数据&lt;/li>
+&lt;li>性能增强，比如预取用户可能需要的资源，比如相册中的后面数张图片&lt;/li>
+&lt;li>还有很多！&lt;/li>
+&lt;/ul>
+&lt;p>通过 Service Worker，可以实现离线的 Web App！&lt;/p></description></item><item><title>Swift 开发随笔1</title><link>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%941/</link><pubDate>Wed, 29 Mar 2023 22:46:55 +0800</pubDate><guid>https://chen03.github.io/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%941/</guid><description>&lt;p>关于不同的翻译到底要怎么把单词数据转换成对应的Anki field的问题——&lt;br>
+（涉及到：字典类型、单词显示View、转换函数如何组织）&lt;br>
+&lt;del>最终决定还是：把 &lt;code>SearchResult&lt;/code> 抽象出来，然后在各自的 &lt;code>SearchResult&lt;/code> 中糅合&lt;/del>&lt;/p>
+&lt;p>&lt;del>并不行……Swift不支持泛型数组……&lt;/del>&lt;br>
+&lt;del>可恶你不是现代语言吗怎么这点东西都不支持……&lt;/del>&lt;/p>
+&lt;p>它支持的！！但是，&lt;code>any SearchResult cannot conform to Protocol Identifiable&lt;/code>&lt;br>
+解决方法：只要在 View 里尽量不用涉及要遵循接口的 View 就可以了……&lt;/p>
+&lt;p>And protocol 里的 View 要写成 any View，因为 View 本身也是接口&lt;br>
+解决方法：使用 &lt;code>AnyView&lt;/code>，是一个 Structure（怎么又来一个新东西&lt;br>
+（PS 既然 Swift 你都有这样的工具 struct 了，官方拓展一下 Published+Codable 又会怎么样呢……&lt;/p></description></item><item><title>💐ハナタバ</title><link>https://chen03.github.io/p/%E3%83%8F%E3%83%8A%E3%82%BF%E3%83%90/</link><pubDate>Wed, 29 Mar 2023 12:59:57 +0000</pubDate><guid>https://chen03.github.io/p/%E3%83%8F%E3%83%8A%E3%82%BF%E3%83%90/</guid><description>&lt;img src="https://chen03.github.io/p/%E3%83%8F%E3%83%8A%E3%82%BF%E3%83%90/cover.JPG" alt="Featured image of post 💐ハナタバ" />&lt;blockquote>
+&lt;p>さよならって言わせてよ　昨日の寂しさに&lt;br>
+いつしか空っぽな心だけが　夜空に咲いたんだ&lt;/p>
+&lt;/blockquote>
+&lt;p>Hello, world.&lt;/p></description></item><item><title>Hello?</title><link>https://chen03.github.io/p/hello/</link><pubDate>Wed, 29 Mar 2023 12:41:12 +0000</pubDate><guid>https://chen03.github.io/p/hello/</guid><description>&lt;blockquote>
+&lt;p>How are you? 羨ましいな、みんなに愛されて&lt;/p>
+&lt;/blockquote></description></item><item><title>Test</title><link>https://chen03.github.io/p/why-you-dont-render/</link><pubDate>Wed, 29 Mar 2023 12:41:12 +0000</pubDate><guid>https://chen03.github.io/p/why-you-dont-render/</guid><description>&lt;p>呜呜搭个博客怎么都这么难……为什么官方文档关于 &lt;code>hugo new&lt;/code> 只有一句话……是我的错吗……&lt;br>
+&lt;del>一定是hugo对我把它记成对家的惩罚（什么&lt;/del>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">@Chen03 ➜ /workspaces/chen03.github.io &lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> $ hexo new post/test.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bash: /usr/local/share/npm-global/bin/hexo: No such file or directory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@Chen03 ➜ /workspaces/chen03.github.io &lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> $ hugo new post/test.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Content &lt;span class="s2">&amp;#34;/workspaces/chen03.github.io/content/post/test.md&amp;#34;&lt;/span> created
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Archives</title><link>https://chen03.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://chen03.github.io/archives/</guid><description/></item><item><title>Hello World</title><link>https://chen03.github.io/p/hello-world/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://chen03.github.io/p/hello-world/</guid><description>&lt;img src="https://chen03.github.io/p/hello-world/cover.jpg" alt="Featured image of post Hello World" />&lt;p>Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!&lt;/p>
+&lt;p>For more information about this theme, check the documentation: &lt;a class="link" href="https://docs.stack.jimmycai.com/" target="_blank" rel="noopener"
+>https://docs.stack.jimmycai.com/&lt;/a>&lt;/p>
+&lt;p>Want a site like this? Check out &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter" target="_blank" rel="noopener"
+>hugo-theme-stack-stater&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>About</title><link>https://chen03.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chen03.github.io/about/</guid><description>&lt;p>About? About what?&lt;/p></description></item><item><title>Links</title><link>https://chen03.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chen03.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://chen03.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chen03.github.io/search/</guid><description/></item></channel></rss>

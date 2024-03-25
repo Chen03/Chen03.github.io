@@ -1,0 +1,176 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta name=darkreader-lock><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="冰岩分享：2分钟精通 Worker.js"><title>Worker.js</title>
+<link rel=canonical href=https://chen03.github.io/p/worker.js/><link rel=stylesheet href=/scss/style.min.902e959f391aa395de462647b74972b2afb9a74531de358bafd565d12ace0c35.css><meta property='og:title' content="Worker.js"><meta property='og:description' content="冰岩分享：2分钟精通 Worker.js"><meta property='og:url' content='https://chen03.github.io/p/worker.js/'><meta property='og:site_name' content="Blanc's space"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='JavaScript'><meta property='article:published_time' content='2023-03-30T10:28:18+08:00'><meta property='article:modified_time' content='2023-03-30T10:28:18+08:00'><meta property='og:image' content='https://chen03.github.io/p/worker.js/cover.JPG'><meta name=twitter:title content="Worker.js"><meta name=twitter:description content="冰岩分享：2分钟精通 Worker.js"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://chen03.github.io/p/worker.js/cover.JPG'></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><style>.main-container::before{background-image:url(/p/worker.js/cover.JPG)}</style><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><div class=site-meta><h1 class=site-name><a href=/>Blanc's space</a></h1><h2 class=site-description>Hello, how are you?</h2></div></header><ol class=social-menu><li><a href=https://github.com/Chen03/ target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Links</span></a></li><li><a href=/about/><!doctype html><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" viewBox="0 0 1024 1024" width="200" height="200" stroke-width="2" stroke="currentcolor" fill="currentcolor" stroke-linecap="round" stroke-linejoin="round"><path d="M644 263.008q-60.992-64-152-64-84 0-143.488 59.488t-59.488 143.488q0 15.008 10.496 25.504t25.504 10.496 25.504-10.496 10.496-25.504q0-54.016 38.496-92.512t92.512-38.496h.992q59.008.0 99.008 42.016 35.008 36.992 32 84.992-.992 18.016-4 28.992T599.04 464.48t-54.016 62.496q-43.008 43.008-66.496 76.992t-27.488 72q-2.016 15.008 7.488 26.496t24.512 12.512h4q14.016.0 24-8.992t12-23.008q3.008-35.008 72.992-104.992 60.992-60.992 79.488-98.016t20.512-78.016q4.992-79.008-52-139.008zM443.008 816q0-18.016 12.512-30.496t30.496-12.512 30.496 12.512T529.024 816t-12.512 30.496-30.496 12.512-30.496-12.512T443.008 816z" p-id="1452"/></svg>
+<span>About</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#如何使用>如何使用</a><ol><li><a href=#网页端>网页端</a></li><li><a href=#workerjs>worker.js</a></li><li><a href=#结合起来>结合起来&mldr;</a></li></ol></li><li><a href=#一个例子>一个例子</a><ol><li><a href=#calcworkerjs>calc.worker.js</a></li><li><a href=#网页端-1>网页端</a></li></ol></li><li><a href=#可以做到什么>可以做到什么？</a></li><li><a href=#tips>TIPS</a></li><li><a href=#关于-service-worker>关于 Service Worker</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/worker.js/><img src=/p/worker.js/cover.JPG width=1800 height=1412 loading=lazy alt="Featured image of post Worker.js"></a></div><div class=article-details><header class=article-category><a href=/categories/dev/ style=background-color:#ff6d91;color:#fff>开发</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/worker.js/>Worker.js</a></h2><h3 class=article-subtitle>冰岩分享：2分钟精通 Worker.js</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Mar 30, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><p>Web Workers 可以让代码独立于主线程运行，避免大量的运算阻塞浏览器渲染画面，并且可以在计算过程中交互。<br>其实它的功能和API非常简单，就是多线程工具。</p><h2 id=如何使用>如何使用</h2><h3 id=网页端>网页端</h3><ol><li>创建 Worker</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>worker</span> <span class=o>=</span> <span class=nx>Worker</span><span class=p>(</span><span class=s2>&#34;/path/to/worker.js&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>接收来自 Worker 的信息</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>worker</span><span class=p>.</span><span class=nx>onmessage</span> <span class=o>=</span> <span class=nx>event</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>向 Worker 发送信息</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>worker</span><span class=p>.</span><span class=nx>postMessage</span><span class=p>(</span><span class=s2>&#34;Hello!&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=workerjs>worker.js</h3><ol><li>接受信息</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>onmessage</span> <span class=o>=</span> <span class=nx>event</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>data</span> <span class=o>==</span> <span class=s2>&#34;Hello!&#34;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//Do something...
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>发送信息给网页</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>postMessage</span><span class=p>(</span><span class=s2>&#34;How are you?&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=结合起来>结合起来&mldr;</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// &lt;script&gt;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>let</span> <span class=nx>worker</span> <span class=o>=</span> <span class=nx>Worker</span><span class=p>(</span><span class=s2>&#34;/path/to/worker.js&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>worker</span><span class=p>.</span><span class=nx>onmessage</span> <span class=o>=</span> <span class=nx>event</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>worker</span><span class=p>.</span><span class=nx>postMessage</span><span class=p>(</span><span class=s2>&#34;Hello!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//worker.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>onmessage</span> <span class=o>=</span> <span class=nx>event</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nx>event</span><span class=p>.</span><span class=nx>data</span> <span class=o>==</span> <span class=s2>&#34;Hello!&#34;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>postMessage</span><span class=p>(</span><span class=s2>&#34;How are you?&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=一个例子>一个例子</h2><p><a class=link href=https://chen03.github.io/Fifty-five-game/ target=_blank rel=noopener>算法大作业</a></p><h3 id=calcworkerjs>calc.worker.js</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>calculate</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;calculate&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>size</span> <span class=o>!==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=o>!</span><span class=nx>equal</span><span class=p>(</span><span class=nx>dest</span><span class=p>,</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>peek</span><span class=p>().</span><span class=nx>stat</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//算法过程...
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>if</span> <span class=p>(</span><span class=nx>lim</span> <span class=o>%</span> <span class=mi>23</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>postMessage</span><span class=p>({</span><span class=nx>type</span><span class=o>:</span> <span class=s1>&#39;stat&#39;</span><span class=p>,</span> <span class=nx>stat</span><span class=o>:</span> <span class=nx>now</span><span class=p>.</span><span class=nx>stat</span><span class=p>,</span> <span class=nx>step</span><span class=o>:</span> <span class=nx>lim</span><span class=p>});</span> <span class=c1>//发送计算过程到网页
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>//计算结束
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>hasStopped</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>postMessage</span><span class=p>({</span><span class=nx>type</span><span class=o>:</span> <span class=s1>&#39;stop&#39;</span><span class=p>,</span> <span class=nx>dist</span><span class=o>:</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>peek</span><span class=p>().</span><span class=nx>step</span><span class=p>,</span> <span class=nx>time</span><span class=o>:</span> <span class=p>((</span><span class=k>new</span> <span class=nb>Date</span><span class=p>).</span><span class=nx>getTime</span><span class=p>())});</span>
+</span></span><span class=line><span class=cl>  <span class=nx>postMessage</span><span class=p>({</span><span class=nx>type</span><span class=o>:</span> <span class=s1>&#39;stat&#39;</span><span class=p>,</span> <span class=nx>stat</span><span class=o>:</span> <span class=nx>dest</span><span class=p>,</span> <span class=nx>step</span><span class=o>:</span> <span class=nx>lim</span><span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 以下为与网页交互内容
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>onmessage</span> <span class=o>=</span> <span class=p>(</span><span class=nx>ev</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>switch</span> <span class=p>(</span><span class=nx>ev</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>type</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=s1>&#39;start&#39;</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>      <span class=c1>//开始算法过程
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=网页端-1>网页端</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>App</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=p>...</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>worker</span><span class=p>,</span> <span class=nx>setWorker</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>worker</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=kd>var</span> <span class=nx>worker</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Worker</span><span class=p>(</span><span class=k>new</span> <span class=nx>URL</span><span class=p>(</span><span class=s1>&#39;./calc.worker.js&#39;</span><span class=p>,</span> <span class=kr>import</span><span class=p>.</span><span class=nx>meta</span><span class=p>.</span><span class=nx>url</span><span class=p>));</span>  <span class=c1>//新建 Worker
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>worker</span><span class=p>.</span><span class=nx>onmessage</span> <span class=o>=</span> <span class=p>(</span><span class=nx>ev</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>switch</span><span class=p>(</span><span class=nx>ev</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>type</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=k>case</span> <span class=s1>&#39;stat&#39;</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>            <span class=nx>startTransition</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>              <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nx>setBoard</span><span class=p>(</span><span class=nx>ev</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>stat</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=nx>setStep</span><span class=p>(</span><span class=nx>ev</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>step</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>              <span class=p>});</span>
+</span></span><span class=line><span class=cl>            <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>          <span class=k>case</span> <span class=s1>&#39;stop&#39;</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>            <span class=nx>setStopped</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>setDist</span><span class=p>(</span><span class=nx>ev</span><span class=p>.</span><span class=nx>data</span><span class=p>.</span><span class=nx>dist</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=nx>setWorker</span><span class=p>(</span><span class=nx>worker</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[]);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span> <span class=p>...</span> <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=可以做到什么>可以做到什么？</h2><ul><li>执行大型计算时，可以避免阻塞主线程</li><li>好像没有了……</li></ul><p>但是真的在有用的时候很有用……</p><h2 id=tips>TIPS</h2><p>如果你在使用 <a class=link href=https://webpack.js.org/guides/web-workers/ target=_blank rel=noopener>Webpack</a> 或者 <a class=link href=https://vitejs.dev/guide/features.html#web-workers target=_blank rel=noopener>Vite</a>, 要这样创建 Worker:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>new</span> <span class=nx>Worker</span><span class=p>(</span><span class=k>new</span> <span class=nx>URL</span><span class=p>(</span><span class=s1>&#39;./worker.js&#39;</span><span class=p>,</span> <span class=kr>import</span><span class=p>.</span><span class=nx>meta</span><span class=p>.</span><span class=nx>url</span><span class=p>));</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=关于-service-worker>关于 Service Worker</h2><p><em>内容来自 MDN</em></p><p>Service Worker 是另一种 Worker，通常用于 Web App 中，可以截获网页的网络请求事件并对请求加以修改，从而实现一些很厉害的功能：</p><ul><li>实现页面离线加载（使用缓存）</li><li>集中接收计算成本高的数据更新，比如地理位置和陀螺仪信息，这样多个页面就可以利用同一组数据</li><li>性能增强，比如预取用户可能需要的资源，比如相册中的后面数张图片</li><li>还有很多！</li></ul><p>通过 Service Worker，可以实现离线的 Web App！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/javascript/>JavaScript</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%942/><div class=article-details><h2 class=article-title>Swift 开发随笔2</h2></div></a></article><article><a href=/p/css%E4%B8%96%E7%95%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/><div class=article-details><h2 class=article-title>CSS世界读书笔记</h2></div></a></article><article><a href=/d/swift-%E5%BC%80%E5%8F%91%E9%9A%8F%E7%AC%941/><div class=article-details><h2 class=article-title>Swift 开发随笔1</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2023 -
+2024 Blanc's space</section><section class=powerby><span class=custom-text>Hello!</span></br><script>fetch("https://v1.hitokoto.cn?c=d&c=h&c=i&c=k&encode=text").then(e=>e.text()).then(e=>document.getElementsByClassName("custom-text")[0].innerHTML=e)</script>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & ❤️<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计，真的很好看！！</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
